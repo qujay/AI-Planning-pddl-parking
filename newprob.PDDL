@@ -5,10 +5,8 @@
 (:objects
 	entry sw1 sw2 sw3 se1 se2 se3 es1 es2 es3 en1 en2 en3 ne1 ne2 ne3 nw1 nw2 nw3 wn1 wn2 wn3 ws1 ws2 ws3 cw1 cw2 cw3 cn1 cn2 cn3 ce1 ce2 ce3 cs1 cs2 cs3 cr1 cr2 cr3 cr4 cr5 cr6 cr7 cr8 cr9
 	- position
-      r0 r1 r2 r3 r4 r5 r6 r7 r8 r9 r10 r11 r12 - road
+      	r0 r1 r2 r3 r4 r5 r6 r7 r8 r9 r10 r11 r12 - road
 	west south east north - direction
-	
- 
 	car1 car2 car3 - car
 
 )
@@ -53,7 +51,6 @@
       (occupied cs1)
       (occupied cs2)
       (occupied cs3)
-
 	
       (is_cr cr1)
       (is_cr cr2)
@@ -102,7 +99,6 @@
       (is_pk cs1)
       (is_pk cs2)
       (is_pk cs3)
-
 
       (belong entry r0)
       (belong sw1 r1)
@@ -179,8 +175,7 @@
       (locate cr8 cn3 north)
       (locate cr9 nw1 east)
       (locate cr9 ne1 east)
-      
-      
+          
       (adjacent entry cr1)
       (adjacent cr1 sw1)
       (adjacent sw1 sw2)
@@ -290,17 +285,12 @@
       (adjacent cs1 cr5)
       (adjacent cs2 cs1)
       (adjacent cs3 cs2)
-      (adjacent cr2 cs3)
-
-
-      
+      (adjacent cr2 cs3)      
 )
 
 (:goal
       (and
-            (is_parked car1)
-            
-        	
+            (is_parked car1)      	
       )
 )
 )
