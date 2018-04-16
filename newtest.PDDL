@@ -12,18 +12,12 @@
 (:predicates   
 
 		(at_position ?c - car ?p - position)
-		
-
-        (occupied ?p - position)
-		(not_occupied ?p - position)
-                                                  
-        (is_parked ?c - car)
-
+        	(occupied ?p - position)
+		(not_occupied ?p - position)                                                
+        	(is_parked ?c - car)
 		(adjacent ?p1 ?p2 - location)
-
 		(is_cr ?cr - position)
 		(is_pk ?p - position)
-
 		(locate ?p1 ?p2 - position ?d - direction)
 		(belong ?p - position ?r - road)
 )
@@ -33,16 +27,15 @@
  :parameters    (?c - car ?from ?to - position ?r - road)
 
  :precondition  (and
- 				(is_pk ?from) 
- 				(belong ?from ?r)                               
-                 (at_position ?c ?from)
-		 		(adjacent ?from ?to)
+		(is_pk ?from) 
+		(belong ?from ?r)                               
+		(at_position ?c ?from)
+		(adjacent ?from ?to)
               )
 
- :effect        (and
-		                                     
-				(at_position ?c ?to)
-				(not (at_position ?c ?from))
+ :effect        (and	                                     
+		(at_position ?c ?to)
+		(not (at_position ?c ?from))
                 )
 )
 
@@ -56,12 +49,10 @@
 		 (locate ?to ?from ?d) 		
 		 (at_position ?c ?from)
 		 (adjacent ?from ?to)
-
 		)
  :effect	(and
 		 (at_position ?c ?to)
 		 (not (at_position ?c ?from))
-
 		)
 )
 
@@ -77,5 +68,4 @@
 	      (not (not_occupied ?p))
          )
 )
-
 )
